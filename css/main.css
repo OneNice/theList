@@ -1,0 +1,151 @@
+body{
+    margin:0;
+    font-family: 'Montserrat', sans-serif;
+}
+section{
+    margin: 90px;
+    border-left: 4px solid #a4b2ff;
+}
+section h2{
+    margin:40px -26px 0;
+    background: #fff;
+    padding: 25px;
+    position: relative;
+}
+article{
+    display: block;
+    width: 450px;
+    margin: 40px 0 40px 40px;
+    box-shadow:0px 0px 20px rgba(1,1,1,0.07);
+    border-radius: 15px;
+    padding: 30px;
+    transition: 0.3s all ease;
+    position: relative;
+}
+article::before{
+    content: '';
+    display: block;
+    position: absolute;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    top:15px;
+    left:15px;
+    background: #a4b2ff;
+}
+article.active::before{
+    background: #02c844;
+}
+article.dd3::after{
+    content: 'за 3 дня';
+    font-size: 12px;
+    padding: 5px;
+    background: #ff6461;
+    color: #fff;
+    font-weight: 500;
+    position: absolute;
+    right: -5px;
+    top:-5px;
+    border-radius: 3px;
+}
+article.dd7::after{
+    content: 'за 7 дней';
+    font-size: 12px;
+    padding: 5px;
+    background: #ff6461;
+    color: #fff;
+    font-weight: 500;
+    position: absolute;
+    right: -5px;
+    top:-5px;
+    border-radius: 3px;
+}
+article.dd14::after{
+    content: 'за 14 дней';
+    font-size: 12px;
+    padding: 5px;
+    background: #ff6461;
+    color: #fff;
+    font-weight: 500;
+    position: absolute;
+    right: -5px;
+    top:-5px;
+    border-radius: 3px;
+}
+
+article:hover{
+    box-shadow:0px 0px 25px rgba(1,1,1,0.12);
+}
+article h3{
+    margin: 0 0 15px 0;
+}
+span.setNotification{
+    display: block;
+    cursor: pointer;
+    margin-top: 10px;
+    color: #6e46d1;
+    font-weight: 500;
+}
+.blur{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top:0;
+    left:0;
+    background: rgba(0, 0, 0, 0.49);
+    z-index: 9;
+    opacity: 0;
+    visibility: hidden;
+}
+.blur.active{
+    opacity: 1;
+    visibility: visible;
+}
+.blur .wnd{
+    display: inline-block;
+    background: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow:0px 0px 25px rgba(1,1,1,0.12);
+    position: fixed;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+.box .itemDay{
+    border: 2px solid #ff6461;
+    padding: 5px 10px;
+    color: #ff6461;display: inline-block;
+    font-size: 12px;
+    margin: 8px 3px;
+    transition: 0.3s all ease;
+    cursor: pointer;
+}
+.box .itemDay.activeDay{
+    border: 2px solid #02c844;
+    color: #fff;
+    background: #02c844;
+}
+.box .itemDay.activeDay:hover{
+    color: #fff;
+    background: #02c844;
+}
+.box .itemDay:hover{
+    background: #ff6461;
+    color: #fff;
+}
+.exit{
+    margin-top: 10px;
+    cursor: pointer;
+    color: #ff6461;
+}
+.set{
+    margin-top: 10px;
+    cursor: pointer;
+    color: #6e46d1;
+}
+.hide{
+    font-size: 12px;
+    margin: 20px;
+    color: #adadad;
+}
