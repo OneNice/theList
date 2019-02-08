@@ -3,7 +3,7 @@ self.addEventListener('install', function(event) {
         caches.open('myFvCache').then(function(cache) {
             return cache.addAll([
                 '/theList/',
-                '/theList/index.php',
+                '/theList/index.html',
                 '/theList/css/main.css',
                 '/theList/helper.js',
             ]);
